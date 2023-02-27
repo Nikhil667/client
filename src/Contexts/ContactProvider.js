@@ -3,6 +3,10 @@ import useLocalStorage from '../CustomHooks/useLocalStorage'
 
 const ContactContext = createContext()
 
+export function useContacts(){
+  return useContext(ContactContext);
+}
+
 export function ContactProvider({ children }) {
 
   const[contacts, setContacts] = useLocalStorage('contacts', [])
